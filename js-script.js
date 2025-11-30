@@ -1,13 +1,36 @@
-const container = document.getElementById('container');
+//  js-script.js  //
 
-const div = document.createElement('div');
-div.classList.add('gridSquare');
+// const container = document.querySelector("#container");
+// const div = document.createElement("div");
+// div.classList.add("gridSquare");
 
-container.appendChild(div);
+// container.appendChild(div);
+
+const squaresPerSide = 16;
+const gridTotal = squaresPerSide * squaresPerSide;
+const container = document.querySelector("#container");
+const totalSize = 960;
+const squareSize = totalSize / squaresPerSide;
+
+for (let i = 0; i < gridTotal; i++){
+    const div = document.createElement("div");
+    div.classList.add("gridSquare");
+    div.style.width = `${squareSize}px`;
+    div.style.height = `${squareSize}px`;
+    container.appendChild(div)
+}
 
 
 
 
+
+// Selects #container
+
+// Creates a new <div>
+
+// Gives it a class like "grid-square"
+
+// Appends it to the container
 
 
 // How do you think you could set the width from JS instead of hardcoding it in CSS?
