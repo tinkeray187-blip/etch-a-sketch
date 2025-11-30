@@ -20,6 +20,27 @@ for (let i = 0; i < gridTotal; i++){
     container.appendChild(div)
 }
 
+container.addEventListener("mouseenter", (e) => {
+    if (e.target.classList.contains("gridSquare")) {
+        e.target.style.backgroundColor = "black";
+    }
+}, true)
+
+const btn = document.querySelector("#reset");
+function boardReset(){
+    const cell = document.querySelectorAll(".gridSquare");
+    cell.forEach(cell => {
+        cell.style.backgroundColor = '';
+    })
+}btn.addEventListener("click", boardReset)
+
+
+
+
+
+
+
+
 
 
 
