@@ -1,42 +1,67 @@
 //  js-script.js  //
 
-// const container = document.querySelector("#container");
-// const div = document.createElement("div");
-// div.classList.add("gridSquare");
 
-// container.appendChild(div);
-
-const squaresPerSide = 16;
-const gridTotal = squaresPerSide * squaresPerSide;
 const container = document.querySelector("#container");
 const totalSize = 960;
-const squareSize = totalSize / squaresPerSide;
 
-for (let i = 0; i < gridTotal; i++){
-    const div = document.createElement("div");
-    div.classList.add("gridSquare");
-    div.style.width = `${squareSize}px`;
-    div.style.height = `${squareSize}px`;
-    container.appendChild(div)
+function makeGrid(size) {
+    const gridTotal = size * size;
+    const squareSize = totalSize / size;
+
+    for (let i = 0; i < gridTotal; i++) {
+        const div = document.createElement("div");
+        div.classList.add("gridSquare");
+        div.style.width = `${squareSize}px`;
+        div.style.height = `${squareSize}px`;
+
+        container.appendChild(div);
+    }
 }
 
-container.addEventListener("mouseenter", (e) => {
+function clearGrid() {
+    container.innerHTML = "";
+}
+
+container.addEventListener("mouseover", (e) => {
     if (e.target.classList.contains("gridSquare")) {
         e.target.style.backgroundColor = "black";
     }
-}, true)
+});
 
 const btn = document.querySelector("#reset");
-function boardReset(){
-    const cell = document.querySelectorAll(".gridSquare");
-    cell.forEach(cell => {
-        cell.style.backgroundColor = '';
-    })
-}btn.addEventListener("click", boardReset)
+btn.addEventListener("click", () => {
+    let size = prompt("Enter grid size (1–100):");
+
+    size = Number(size);
+
+    if (!size || size < 1 || size > 100) {
+        alert("Please enter a number between 1 and 100.");
+        return;
+    }
+
+    clearGrid();
+    makeGrid(size);
+});
+
+makeGrid(16);
 
 
 
+// Now, when the button is clicked:
 
+// prompt() for size
+
+// validate size
+
+// clear old grid
+
+// call makeGrid(size)
+
+// grid appears
+
+// hover still works
+
+// Refresh, test, repeat.
 
 
 
