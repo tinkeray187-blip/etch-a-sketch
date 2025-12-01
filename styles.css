@@ -1,4 +1,15 @@
 /* Styles.css */
+/* 
+* {
+    outline: red solid 2px;
+} */
+
+body {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+}
 
 #container {
     display: flex;
@@ -14,3 +25,73 @@
     width: 60px;
     height: 60px;
 }
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: antiquewhite;
+    
+}
+
+.userInput {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+
+}
+
+#reset {
+    width: 100%;
+    height: auto;
+    border: none;
+    background-color: antiquewhite;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+
+
+#reset:hover {
+    color: #fff;
+    text-shadow: 0 0 15px #188da8, 0 0 25px #082938;
+    
+}
+
+
+.userSelect {
+    font-weight: bolder;
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+}
+
+.input {
+    height: 25px;
+    width: 100%;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* 
+.orbitron-<uniquifier> {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */

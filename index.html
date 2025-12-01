@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Etch-a-Sketch</h1>
-    <button id="reset">New Grid</button>
-    <div id="container">
+    <div1 class="options">
+        <h1>Etch-a-Sketch</h1>
+          <div2 class="userInput">
+            <button id="reset">New Grid</button>
+            <input class="input" type="number" id="gridSizeSelect" name="gridSizeSelect" min="10" max="100" step="1">
+            <label class="userSelect" for="gridSizeSelect">Select Grid Size (only numbers 10 - 100 accepted)</label>
+          </div2>
+    </div1>
+    <div3>
+        <div id="container">
 
-    </div>
+        </div>
+    </div3>
     <script src="js-script.js">
 
     </script>

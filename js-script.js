@@ -29,13 +29,15 @@ container.addEventListener("mouseover", (e) => {
 });
 
 const btn = document.querySelector("#reset");
+const input = document.querySelector("#gridSizeSelect");
+
 btn.addEventListener("click", () => {
-    let size = prompt("Enter grid size (1–100):");
-
-    size = Number(size);
-
-    if (!size || size < 1 || size > 100) {
-        alert("Please enter a number between 1 and 100.");
+    let size = Number(input.value);  
+    if (!size) {
+        size = 16;
+    }
+    if (size < 10 || size > 100) {
+        alert("Please enter a number between 10 and 100.");
         return;
     }
 
@@ -62,13 +64,6 @@ makeGrid(16);
 // hover still works
 
 // Refresh, test, repeat.
-
-
-
-
-
-
-
 
 // Selects #container
 
