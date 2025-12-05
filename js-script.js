@@ -22,11 +22,31 @@ function clearGrid() {
     container.innerHTML = "";
 }
 
-container.addEventListener("mouseover", (e) => {
+let isDrawing = false;
+
+container.addEventListener("mousedown", (e) => {
     if (e.target.classList.contains("gridSquare")) {
+        isDrawing = true;
         e.target.style.backgroundColor = "black";
     }
 });
+
+document.addEventListener("mouseup", () => {
+    isDrawing = false;
+});
+
+container.addEventListener("mouseover", (e) => {
+    if (isDrawing && e.target.classList.contains("gridSquare")) {
+        e.target.style.backgroundColor = "black";
+    }
+});
+
+
+// container.addEventListener("mouseover", (e) => {
+//     if (e.target.classList.contains("gridSquare")) {
+//         e.target.style.backgroundColor = "black";
+//     }
+// });
 
 const btn = document.querySelector("#reset");
 const input = document.querySelector("#gridSizeSelect");
