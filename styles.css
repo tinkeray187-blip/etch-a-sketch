@@ -1,8 +1,4 @@
 /* Styles.css */
-/* 
-* {
-    outline: red solid 2px;
-} */
 
 body {
     display: flex;
@@ -21,7 +17,7 @@ body {
 
 .gridSquare {
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid black;
     width: 60px;
     height: 60px;
 }
@@ -57,7 +53,7 @@ h1 {
     font-family: "Orbitron", sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s  ease-in-out;
 
 }
 
@@ -65,7 +61,7 @@ h1 {
 
 #reset:hover {
     color: #fff;
-    text-shadow: 0 0 15px #188da8, 0 0 25px #082938;
+    text-shadow: 0 0 15px #10667a, 0 0 25px #082938;
     
 }
 
@@ -87,11 +83,39 @@ h1 {
     50% { transform: translateX(10px); }
     75% { transform: translateX(-5px); }
 }
+#rainbowMode, #blackMode {
+    width: 100%;
+    height: auto;
+    border: none;
+    background-color: antiquewhite;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.3s  ease-in-out;
+    margin-top: 10px;
+}
 
-/* 
-.orbitron-<uniquifier> {
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
+#rainbowMode:hover, #blackMode:hover {
+    color: #fff;
+    text-shadow: 0 0 15px #0d4d5b, 0 0 25px #082938;
+}
+#toggleShading {
+    width: 100%;
+    height: auto;
+    border: none;
+    background-color: #84b8c4;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.3s  ease-in-out;
+    margin-top: 10px;
+}
+
+#toggleShading:hover {
+    color: #fff;
+    text-shadow: 0 0 15px #188da8, 0 0 25px #082938;
+}
+
+#toggleShading.off {
+    background-color: #ff6b6b;
+}
